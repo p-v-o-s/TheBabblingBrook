@@ -10,9 +10,14 @@ def sayPhrase(phrase):
     
 
 ser=serial.Serial('/dev/ttyUSB0',115200)
+
+
 while 1:
+
+    # open the serial port
+    ser.close()
+    ser.open()
     x=ser.readline()
-    print x
     x=x.replace(";","")
     xs= x.split()
     if len(xs)==12:
@@ -36,8 +41,4 @@ while 1:
 
         sayPhrase(fullSentence)
 
-        print heading, alt 
-
-        time.sleep(3)
-
-   
+    time.sleep(2)
