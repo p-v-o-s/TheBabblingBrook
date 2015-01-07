@@ -17,7 +17,6 @@ void loop(){
 
   // Turn LED on/off if we recieve 'Y'/'N' over serial 
   if (msg=='Y') {            
-    digitalWrite(ledPin, HIGH);  // turn LED ON
     Serial.println(val);  
      val = val + 1;
     msg=' ';
